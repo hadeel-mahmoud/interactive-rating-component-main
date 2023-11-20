@@ -1,0 +1,16 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.numberContainer {
+  background-color: #484b81;
+  border-radius: 15px;
+  color: white;
+  padding: 5px 10px;
+  font-size: 12px;
+  cursor: pointer;
+}
+.numberContainer:hover {
+  background-color: orange !important;
+}
