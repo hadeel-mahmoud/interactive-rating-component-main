@@ -1,15 +1,20 @@
+import { useDispatch, useSelector } from "react-redux";
 import styles from "./RatingNumbers.module.css";
+import { rate } from "../../store/ratingSlice";
 
 export default function RatingNumbers(props) {
   const values = [1, 2, 3, 4, 5];
+  const rating = useSelector((state) => state.rating.value.payload);
+  const dispatch = useDispatch();
   const handleValueClick = (value) => {
-    props.setRating(value);
+    dispatch(rate(value));
   };
   return (
     <div className={styles.container}>
-      {values.map((value) => (
+      {values.map((value, index) => (
         <p
-          style={props.rating == value ? { background: "grey" } : null}
+          key={index}
+          style={rating == value ? { background: "grey" } : null}
           onClick={() => handleValueClick(value)}
           className={styles.numberContainer}
         >
