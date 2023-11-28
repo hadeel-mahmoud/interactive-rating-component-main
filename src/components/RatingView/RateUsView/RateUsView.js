@@ -21,7 +21,7 @@ export default function RateUsView(props) {
         className={styles.submitButton}
         onClick={handleSubmit}
       >
-        Submitt
+        Submit
       </button>
     </>
   );
