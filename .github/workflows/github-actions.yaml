@@ -8,6 +8,7 @@ jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
     steps:
-
+      - name: Checkout repository code
+        uses: actions/checkout@v4
       - name: Run Tests
         run: npm test
