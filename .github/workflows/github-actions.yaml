@@ -19,4 +19,4 @@ jobs:
         env:
           GITHUB_TOKEN: ${secrets.RATING-COMPONENT-TOKEN}
           BRANCH: development
-          Bump: Patch
+          Bump: patch
