@@ -14,7 +14,7 @@ jobs:
         run: |
           npm install -s
           npm test
-      - name: Bump Version and push tag
+      - name: Semantic version bump per branch and tag
         uses: Instrument/github-tag-action@v1.0.0
         env:
           GITHUB_TOKEN: ${secrets.RATING_COMPONENT_TOKEN}
