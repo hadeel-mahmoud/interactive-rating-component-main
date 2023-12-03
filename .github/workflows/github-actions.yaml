@@ -12,5 +12,11 @@ jobs:
         uses: actions/checkout@v4
       - name: Run Tests
         run: |
-          npm install
+          npm install -s
           npm test
+      - name: Bump Version and push tag
+        uses: Instrument/github-tag-action@v1.0
+        env:
+          GITHUB_TOKEN: ${secrets.RATING-COMPONENT-TOKEN}
+          BRANCH: development
+          Bump: Patch

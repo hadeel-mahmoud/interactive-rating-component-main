@@ -10,7 +10,7 @@ test("Make sure that the RateUsView is rendered", () => {
     </Provider>
   );
 
-  const element = screen.getByTestId("submit-buttonn");
+  const element = screen.getByTestId("submit-button");
   expect(element).toBeInTheDocument();
 });
 
