@@ -17,5 +17,7 @@ jobs:
           npm test
       - name: Bump Version
         run: |
+          git config --global user.name 'hadeel-mahmoud'
+          git config --global user.email 'nez.hadeel@gmail.com'
           npm version patch -m "[RELEASE] %s"
           git push
