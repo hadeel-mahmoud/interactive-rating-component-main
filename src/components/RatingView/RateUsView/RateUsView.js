@@ -17,7 +17,7 @@ export default function RateUsView(props) {
       </p>
       <RatingNumbers />
       <button
-        data-testId="submit-button"
+        data-testid="submit-button"
         className={styles.submitButton}
         onClick={handleSubmit}
       >

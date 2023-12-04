@@ -6,7 +6,7 @@ export default function ThankYouView(props) {
   return (
     <>
       <img src={thankYouImage} />
-      <p data-testId="rating-value">You selected {rating} out of 5</p>
+      <p data-testid="rating-value">You selected {rating} out of 5</p>
       <h2>Thank You</h2>
       <p>
         We appreciate you taking the time to give a rating. If you ever need
