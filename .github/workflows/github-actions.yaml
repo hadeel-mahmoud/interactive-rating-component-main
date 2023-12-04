@@ -7,6 +7,7 @@ on: [push]
 jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
+    if: "!startsWith(github.event.head_commit.message,'RELEASE')"
     steps:
       - name: Checkout repository code
         uses: actions/checkout@v4
@@ -14,9 +15,4 @@ jobs:
         run: |
           npm install -s
           npm test
-      - name: Semantic version bump per branch and tag
-        uses: Instrument/github-tag-action@v1.0
-        env:
-          GITHUB_TOKEN: ${{ secrets.RATING_COMPONENT_TOKEN }}
-          BRANCH: development
-          Bump: patch
+          npm version patch -m "[RELEASE] %s"
