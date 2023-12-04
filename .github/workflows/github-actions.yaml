@@ -15,7 +15,7 @@ jobs:
           token: ${{ secrets.GH_PERSONAL_ACCESS_TOKEN }}
       - name: Run Tests
         run: |
-          echo github.ref
+          echo ${{github.ref}}
           npm install -s
           npm test
       - name: Bump Version
