@@ -15,4 +15,5 @@ jobs:
         run: |
           npm install -s
           npm test
-          npm version patch -m "[RELEASE] %s"
+      - name: Bump Version
+        run: npm version patch -m "[RELEASE] %s"
