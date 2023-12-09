@@ -1,16 +1,23 @@
-import { useSelector } from "react-redux";
 import thankYouImage from "../../../assets/illustration-thank-you.svg";
 export default function ThankYouView(props) {
-  const rating = useSelector((state) => state.rating.value.payload);
   // console.log(rating.payload);
   return (
     <>
-      <img src={thankYouImage} />
-      <p data-testid="rating-value">You selected {rating} out of 5</p>
-      <h2>Thank You</h2>
+      <img
+        src={props.image ? props.thankYouImage : thankYouImage}
+        alt={"Thank You"}
+      />
+      <p data-testid="rating-value">
+        {props.ratingText
+          ? props.ratingText
+          : `You selected ${props.rating} out of 5`}
+      </p>
+      <h2>{props.thankYouText ? props.thankYouText : "Thank You"}</h2>
       <p>
-        We appreciate you taking the time to give a rating. If you ever need
-        more support don't hesitate to get in touch
+        {props.thankYouDescriptionText
+          ? props.thankYouDescriptionText
+          : `We appreciate you taking the time to give a rating. If you ever need
+        more support don't hesitate to get in touch`}
       </p>
     </>
   );
