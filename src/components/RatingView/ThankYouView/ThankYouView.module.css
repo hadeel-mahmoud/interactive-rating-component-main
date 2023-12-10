@@ -1,0 +1,25 @@
+.body {
+  text-align: center;
+}
+.image {
+  width: 8rem;
+  object-fit: contain;
+}
+.score {
+  color: hsl(25, 97%, 53%);
+  font-weight: 400;
+  font-size: 12px;
+  background-color: hsl(213, 18%, 22%);
+  border-radius: 15px;
+  width: fit-content;
+  margin-inline: auto;
+  margin-top: 1.5rem;
+  padding: 6px 20px;
+}
+.headerText {
+  color: white;
+}
+.bodyText {
+  color: hsl(217, 12%, 63%);
+  font-size: 14px;
+}

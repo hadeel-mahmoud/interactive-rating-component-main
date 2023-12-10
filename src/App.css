@@ -2,6 +2,7 @@
   background-color: hsl(220, 13%, 9%);
   min-height: 100vh;
   display: flex;
+  font-family: "Overpass", sans-serif;
 }
 
 @media (prefers-reduced-motion: no-preference) {

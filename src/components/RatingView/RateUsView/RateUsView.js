@@ -15,8 +15,10 @@ export default function RateUsView(props) {
           alt="star"
         />
       </div>
-      <h2>{props.headerText ? props.headerText : "How did we do?"}</h2>
-      <p>
+      <h2 className={styles.header}>
+        {props.headerText ? props.headerText : "How did we do?"}
+      </h2>
+      <p className={styles.bodyText}>
         {props.bodyText
           ? props.bodyText
           : `Please let us know how we did with your support request. All feedback is
