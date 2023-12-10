@@ -4,7 +4,7 @@ import star from "../../../assets/icon-star.svg";
 
 export default function RateUsView(props) {
   function handleSubmit() {
-    props.setShowThankYouNote(true);
+    if (props.rating > 0) props.setShowThankYouNote(true);
   }
   return (
     <>

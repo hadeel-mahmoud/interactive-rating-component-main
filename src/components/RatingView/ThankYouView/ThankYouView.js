@@ -1,12 +1,11 @@
 import thankYouImage from "../../../assets/illustration-thank-you.svg";
 export default function ThankYouView(props) {
-  // console.log(rating.payload);
   return (
     <>
       <img src={props.image ? props.image : thankYouImage} alt={"Thank You"} />
       <p data-testid="rating-value">
         {props.ratingText
-          ? props.ratingText
+          ? props.ratingText.replace("{value}", props.rating)
           : `You selected ${props.rating} out of 5`}
       </p>
       <h2>{props.thankYouText ? props.thankYouText : "Thank You"}</h2>

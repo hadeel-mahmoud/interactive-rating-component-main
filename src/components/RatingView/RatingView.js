@@ -8,21 +8,22 @@ import star from "../../assets/icon-star.svg";
 export default function RatingView() {
   const [showThankYouNote, setShowThankYouNote] = useState(false);
   const [rating, setRating] = useState(-1);
+
   return (
     <Wrapper>
       {showThankYouNote ? (
         <ThankYouView
           image={thankYouImage}
           rating={rating}
-          ratingText={"You selected 5"}
+          ratingText={"You {value} selected 5"}
           thankYouDescriptionText={null}
         />
       ) : (
         <RateUsView
           image={star}
-          handleSubmit={() => {
-            setShowThankYouNote(true);
-          }}
+          // handleSubmit={() => {
+          //   setShowThankYouNote(true);
+          // }}
           setShowThankYouNote={setShowThankYouNote}
           setRating={setRating}
           // headerText={"How would you rate us?"}
