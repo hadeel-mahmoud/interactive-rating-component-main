@@ -41,10 +41,10 @@ test("Make sure that the RatingNumbers is rendered", () => {
   expect(ratingNumbers).toBeInTheDocument();
 });
 
-test("Make sure that the ThankYouView is rendered on Submit ONLY IF a rating is chosen", () => {
-  // render(<RatingView />);
-  // const button = screen.getByTestId("submit-button");
-  // fireEvent.click(button);
-  // const element = screen.getByTestId("rating-value");
-  // expect(element).toBeInTheDocument();
+test("Make sure that the ThankYouView is rendered on submit if no custom submit function is supplied as props", () => {
+  render(<RatingView testRating={1} />);
+  const button = screen.getByTestId("submit-button");
+  fireEvent.click(button);
+  const element = screen.getByTestId("rating-value");
+  expect(element).toBeInTheDocument();
 });

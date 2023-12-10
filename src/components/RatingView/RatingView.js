@@ -5,7 +5,7 @@ import ThankYouView from "./ThankYouView/ThankYouView";
 import thankYouImage from "../../assets/illustration-thank-you.svg";
 import star from "../../assets/icon-star.svg";
 
-export default function RatingView() {
+export default function RatingView(props) {
   const [showThankYouNote, setShowThankYouNote] = useState(false);
   const [rating, setRating] = useState(-1);
 
@@ -29,7 +29,7 @@ export default function RatingView() {
           // headerText={"How would you rate us?"}
           // bodyText={"Let us know how we did. "}
           // submitButtonText={"Lets go"}
-          rating={rating}
+          rating={props.testRating ? props.testRating : rating}
         />
       )}
     </Wrapper>
