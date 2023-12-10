@@ -15,7 +15,7 @@ export default function RatingView() {
         <ThankYouView
           image={thankYouImage}
           rating={rating}
-          ratingText={"You {value} selected 5"}
+          ratingText={"You selected {value} out of 5"}
           thankYouDescriptionText={null}
         />
       ) : (
