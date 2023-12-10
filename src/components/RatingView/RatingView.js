@@ -25,9 +25,9 @@ export default function RatingView() {
           }}
           setShowThankYouNote={setShowThankYouNote}
           setRating={setRating}
-          headerText={"How would you rate us?"}
-          bodyText={"Let us know how we did. "}
-          submitButtonText={"Lets go"}
+          // headerText={"How would you rate us?"}
+          // bodyText={"Let us know how we did. "}
+          // submitButtonText={"Lets go"}
           rating={rating}
         />
       )}

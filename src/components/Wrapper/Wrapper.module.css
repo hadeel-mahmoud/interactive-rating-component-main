@@ -1,7 +1,9 @@
 .container {
-  background-color: #21233c;
-  width: 24rem;
+  background-color: hsl(213, 20%, 18%);
+  background: linear-gradient(hsl(214, 20%, 16%), hsl(205, 17%, 14%));
+  width: 21rem;
   margin: auto auto;
+  height: fit-content;
   border-radius: 20px;
-  padding: 10px;
+  padding: 2rem;
 }

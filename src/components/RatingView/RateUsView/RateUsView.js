@@ -8,10 +8,14 @@ export default function RateUsView(props) {
   }
   return (
     <>
-      <span className={styles.starContainer}>
-        <img src={props.image ? props.image : star} alt="star" />
-      </span>
-      <h3>{props.headerText ? props.headerText : "How did we do?"}</h3>
+      <div className={styles.starContainer}>
+        <img
+          src={props.image ? props.image : star}
+          className={styles.star}
+          alt="star"
+        />
+      </div>
+      <h2>{props.headerText ? props.headerText : "How did we do?"}</h2>
       <p>
         {props.bodyText
           ? props.bodyText

@@ -3,10 +3,7 @@ export default function ThankYouView(props) {
   // console.log(rating.payload);
   return (
     <>
-      <img
-        src={props.image ? props.thankYouImage : thankYouImage}
-        alt={"Thank You"}
-      />
+      <img src={props.image ? props.image : thankYouImage} alt={"Thank You"} />
       <p data-testid="rating-value">
         {props.ratingText
           ? props.ratingText
