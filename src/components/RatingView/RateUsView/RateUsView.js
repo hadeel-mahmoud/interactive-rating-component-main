@@ -28,7 +28,7 @@ export default function RateUsView(props) {
         className={styles.submitButton}
         onClick={props.handleSubmit ? props.handleSubmit : handleSubmit}
       >
-        {props.submitButtonText ? props.submitButtonText : "Submit"}
+        {props.submitButtonText ? props.submitButtonText : "SUBMIT"}
       </button>
     </>
   );

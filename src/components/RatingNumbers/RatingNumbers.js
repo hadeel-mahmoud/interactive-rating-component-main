@@ -10,7 +10,11 @@ export default function RatingNumbers(props) {
       {values.map((value, index) => (
         <p
           key={index}
-          style={props.rating === value ? { background: "grey" } : null}
+          style={
+            props.rating === value
+              ? { background: "grey", color: "white" }
+              : null
+          }
           onClick={() => handleValueClick(value)}
           className={styles.numberContainer}
         >
