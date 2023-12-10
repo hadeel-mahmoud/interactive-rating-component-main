@@ -10,15 +10,16 @@ export default function RateUsView(props) {
     <>
       <div className={styles.starContainer}>
         <img
+          data-testid="star-image"
           src={props.image ? props.image : star}
           className={styles.star}
           alt="star"
         />
       </div>
-      <h2 className={styles.header}>
+      <h2 data-testid="rating-header" className={styles.header}>
         {props.headerText ? props.headerText : "How did we do?"}
       </h2>
-      <p className={styles.bodyText}>
+      <p data-testid="rating-description" className={styles.bodyText}>
         {props.bodyText
           ? props.bodyText
           : `Please let us know how we did with your support request. All feedback is

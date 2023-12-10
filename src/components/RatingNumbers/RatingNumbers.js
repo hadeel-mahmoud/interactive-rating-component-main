@@ -9,6 +9,7 @@ export default function RatingNumbers(props) {
     <div className={styles.container}>
       {values.map((value, index) => (
         <p
+          data-testid={`rating-numbers-${index}`}
           key={index}
           style={
             props.rating === value
