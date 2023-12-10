@@ -1,21 +1,39 @@
 .starContainer {
-  padding: 5px 7px;
-  background-color: #484b81;
-  border-radius: 15px;
+  background-color: hsl(213, 18%, 22%);
+  border-radius: 50%;
+  width: 2.5rem;
+  height: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2rem;
 }
-h3 {
+.star {
+  width: 1rem;
+  height: 1rem;
+}
+.header {
   color: white;
-  font-weight: 500;
+  font-weight: 400;
+  margin-bottom: 0;
 }
-p {
-  color: #515365;
+.bodyText {
+  color: hsl(217, 12%, 63%);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 25px;
 }
 .submitButton {
-  background-color: white;
-  color: orange;
+  font-size: 16px;
+  background-color: hsl(25, 97%, 53%);
+  color: white;
   width: 100%;
-  border-radius: 15px;
-  padding: 5px 0;
-  font-weight: 500;
+  border-radius: 25px;
+  padding: 10px 0;
+  font-weight: 700;
   cursor: pointer;
+}
+.submitButton:hover {
+  background-color: white;
+  color: hsl(25, 97%, 53%);
 }

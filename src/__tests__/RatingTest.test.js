@@ -1,27 +1,87 @@
 import { fireEvent, render, screen } from "@testing-library/react";
 import RateUsView from "../components/RatingView/RateUsView/RateUsView";
-import store from "../store/store";
-import { Provider } from "react-redux";
 import RatingView from "../components/RatingView/RatingView";
+import RatingNumbers from "../components/RatingNumbers/RatingNumbers";
+import ThankYouView from "../components/RatingView/ThankYouView/ThankYouView";
 test("Make sure that the RateUsView is rendered", () => {
+  render(<RateUsView />);
+
+  const image = screen.getByTestId("star-image");
+  expect(image).toBeInTheDocument();
+
+  const ratingHeader = screen.getByTestId("rating-header");
+  expect(ratingHeader).toBeInTheDocument();
+
+  const ratingDescription = screen.getByTestId("rating-description");
+  expect(ratingDescription).toBeInTheDocument();
+
+  const button = screen.getByTestId("submit-button");
+  expect(button).toBeInTheDocument();
+});
+test("Make sure that the RateUsView is rendered with given props", () => {
   render(
-    <Provider store={store}>
-      <RateUsView />
-    </Provider>
+    <RateUsView
+      headerText={"header-text"}
+      bodyText={"body-text"}
+      submitButtonText={"submit-button-text"}
+    />
   );
 
-  const element = screen.getByTestId("submit-button");
-  expect(element).toBeInTheDocument();
+  const ratingHeader = screen.getByText("header-text");
+  expect(ratingHeader).toBeInTheDocument();
+
+  const ratingDescription = screen.getByText("body-text");
+  expect(ratingDescription).toBeInTheDocument();
+
+  const button = screen.getByText("submit-button-text");
+  expect(button).toBeInTheDocument();
+});
+test("Make sure that the RatingNumbers is rendered", () => {
+  render(<RatingNumbers />);
+  const ratingNumbers = screen.getByTestId("rating-numbers-1");
+  expect(ratingNumbers).toBeInTheDocument();
 });
 
-test("Make sure that the ThankYouView is rendered on Submit ONLY IF a rating is chosen", () => {
-  render(
-    <Provider store={store}>
-      <RatingView />
-    </Provider>
-  );
+test("Make sure that the ThankYouView is rendered on submit if no custom submit function is supplied as props", () => {
+  render(<RatingView testRating={1} />);
   const button = screen.getByTestId("submit-button");
   fireEvent.click(button);
   const element = screen.getByTestId("rating-value");
   expect(element).toBeInTheDocument();
+});
+
+test("Make sure that the ThankYouView is rendered", () => {
+  render(<ThankYouView />);
+
+  const image = screen.getByTestId("thank-you-image");
+  expect(image).toBeInTheDocument();
+
+  const ratingValue = screen.getByTestId("rating-value");
+  expect(ratingValue).toBeInTheDocument();
+
+  const thankYouHeader = screen.getByTestId("thank-you-header");
+  expect(thankYouHeader).toBeInTheDocument();
+
+  const thankYouDescription = screen.getByTestId("thank-you-description");
+  expect(thankYouDescription).toBeInTheDocument();
+});
+
+test("Make sure that the ThankYouView is rendered with given props", () => {
+  render(
+    <ThankYouView
+      ratingText={"You selected {value}"}
+      rating={3}
+      thankYouDescriptionText={"thank-you-description"}
+      thankYouText={"thank-you-header"}
+    />
+  );
+
+  const ratingValue = screen.getByText("You selected 3");
+  expect(ratingValue).toBeInTheDocument();
+
+  const thankYouHeader = screen.getByText("thank-you-header");
+  expect(thankYouHeader).toBeInTheDocument();
+
+  const thankYouDescription = screen.getByText("thank-you-description");
+  expect(thankYouDescription).toBeInTheDocument();
 });

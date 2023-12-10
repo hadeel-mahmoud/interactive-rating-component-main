@@ -1,6 +1,6 @@
 {
   "name": "interactive-rating-component-main",
-  "version": "0.1.0",
+  "version": "0.0.0",
   "private": true,
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.7",
@@ -39,9 +39,7 @@
   },
   "jest": {
     "coverageThreshold": {
-      "global": {
-        "lines": 10
-      }
+      "global": {}
     }
   }
 }

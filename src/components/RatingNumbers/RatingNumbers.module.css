@@ -4,13 +4,19 @@
   align-items: center;
 }
 .numberContainer {
-  background-color: #484b81;
-  border-radius: 15px;
-  color: white;
-  padding: 5px 10px;
-  font-size: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: hsl(213, 18%, 22%);
+  border-radius: 50%;
+  width: 2.8rem;
+  height: 2.8rem;
+  font-size: 1rem;
   cursor: pointer;
+  color: hsl(217, 12%, 63%);
+  margin-bottom: 2rem;
 }
 .numberContainer:hover {
-  background-color: orange !important;
+  background-color: hsl(25, 97%, 53%) !important;
+  color: white;
 }
