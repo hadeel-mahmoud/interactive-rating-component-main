@@ -6,16 +6,17 @@ export default function RatingNumbers(props) {
     props.setRating(value);
   };
   return (
-    <div className={styles.container}>
+    <div className={styles.container} style={props.ratingNumberContainerStyle}>
       {values.map((value, index) => (
         <p
           data-testid={`rating-numbers-${index}`}
           key={index}
-          style={
+          style={[
+            props.ratingNumberStyle,
             props.rating === value
               ? { background: "grey", color: "white" }
-              : null
-          }
+              : null,
+          ]}
           onClick={() => handleValueClick(value)}
           className={styles.numberContainer}
         >
