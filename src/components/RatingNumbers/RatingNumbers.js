@@ -11,12 +11,15 @@ export default function RatingNumbers(props) {
         <p
           data-testid={`rating-numbers-${index}`}
           key={index}
-          style={[
-            props.ratingNumberStyle,
+          style={
             props.rating === value
-              ? { background: "grey", color: "white" }
-              : null,
-          ]}
+              ? {
+                  background: "grey",
+                  color: "white",
+                  ...props.ratingNumberStyle,
+                }
+              : props.ratingNumberStyle
+          }
           onClick={() => handleValueClick(value)}
           className={styles.numberContainer}
         >

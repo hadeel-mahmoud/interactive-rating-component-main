@@ -10,7 +10,7 @@ export default function RatingView(props) {
   const [rating, setRating] = useState(-1);
 
   return (
-    <Wrapper style={props.style}>
+    <Wrapper style={props.containerStyle}>
       {!showThankYouNote ? (
         <RateUsView
           handleSubmit={() => {
