@@ -1,5 +1,6 @@
-import thankYouImage from "../../../assets/illustration-thank-you.svg";
+import thankYouImage from "../../assets/illustration-thank-you.svg";
 import styles from "./ThankYouView.module.css";
+
 export default function ThankYouView(props) {
   return (
     <div className={styles.body} style={props.thankYouBodyStyle}>

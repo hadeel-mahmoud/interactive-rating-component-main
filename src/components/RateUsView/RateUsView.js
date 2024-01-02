@@ -1,6 +1,6 @@
 import styles from "./RateUsView.module.css";
-import RatingNumbers from "../../RatingNumbers/RatingNumbers";
-import star from "../../../assets/icon-star.svg";
+import RatingNumbers from "../RatingNumbers/RatingNumbers";
+import star from "../../assets/icon-star.svg";
 
 export default function RateUsView(props) {
   function handleSubmit() {
@@ -14,7 +14,7 @@ export default function RateUsView(props) {
           src={props.image ? props.image : star}
           className={styles.star}
           alt="star"
-          style={styles.imageStyle}
+          style={props.imageStyle}
         />
       </div>
       <h2
