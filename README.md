@@ -7,12 +7,12 @@ React rating component that consists of a rating card which allows the user to e
 
 # Installation
 
-`npm i @hadeel-mahmoud/interactive-rating-widget`
+`npm i @hadeel-mahmoud/react-interactive-rating-widget`
 
 # Usage
 
 ```js
-import RatingView from "@hadeel-mahmoud/interactive-rating-widget";
+import RatingView from "@hadeel-mahmoud/react-interactive-rating-widget";
 
 <RatingView />;
 ```

@@ -1,6 +1,6 @@
 {
-  "name": "@hadeel-mahmoud/interactive-rating-widget",
-  "version": "3.0.3",
+  "name": "@hadeel-mahmoud/react-interactive-rating-widget",
+  "version": "1.0.0",
   "description": "React rating component that consists of a rating card that allows the user to enter a rating number between 1 and 5 then displays a thank you card once the user has submitted their rating. All the styling and card contents are customizable.",
   "main": "dist/index.js",
   "scripts": {
