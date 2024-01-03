@@ -8,45 +8,52 @@ export default function RateUsView(props) {
   }
   return (
     <>
-      <div className={styles.starContainer} style={props.imageContainerStyle}>
+      <div
+        className={styles.starContainer}
+        style={props.ratingViewImageContainerStyle}
+      >
         <img
           data-testid="star-image"
-          src={props.image ? props.image : star}
+          src={props.ratingViewImage ? props.ratingViewImage : star}
           className={styles.star}
           alt="star"
-          style={props.imageStyle}
+          style={props.ratingViewImageStyle}
         />
       </div>
       <h2
-        style={props.ratingHeaderStyle}
+        style={props.ratingViewHeaderStyle}
         data-testid="rating-header"
         className={styles.header}
       >
-        {props.headerText ? props.headerText : "How did we do?"}
+        {props.ratingViewHeaderText
+          ? props.ratingViewHeaderText
+          : "How did we do?"}
       </h2>
       <p
-        style={props.ratingDescriptionStyle}
+        style={props.ratingViewDescriptionStyle}
         data-testid="rating-description"
         className={styles.bodyText}
       >
-        {props.bodyText
-          ? props.bodyText
+        {props.ratingViewBodyText
+          ? props.ratingViewBodyText
           : `Please let us know how we did with your support request. All feedback is
         appreciated to help us improve our offering!`}
       </p>
       <RatingNumbers
         rating={props.rating}
         setRating={props.setRating}
-        ratingNumberContainerStyle={props.ratingNumberContainerStyle}
+        ratingNumberContainerStyle={props.ratingViewNumberContainerStyle}
         ratingNumberStyle={props.ratingNumberStyle}
       />
       <button
         data-testid="submit-button"
         className={styles.submitButton}
         onClick={props.handleSubmit ? props.handleSubmit : handleSubmit}
-        style={props.submitButtonStyle}
+        style={props.ratingViewSubmitButtonStyle}
       >
-        {props.submitButtonText ? props.submitButtonText : "SUBMIT"}
+        {props.ratingViewSubmitButtonText
+          ? props.ratingViewSubmitButtonText
+          : "SUBMIT"}
       </button>
     </>
   );

@@ -21,9 +21,9 @@ test("Make sure that the ThankYouView is rendered", () => {
 test("Make sure that the ThankYouView is rendered with given props", () => {
   render(
     <ThankYouView
-      ratingText={"You selected {value}"}
+      thankYouViewRatingResultText={"You selected {value}"}
       rating={3}
-      thankYouDescriptionText={"thank-you-description"}
+      thankYouViewDescriptionText={"thank-you-description"}
       thankYouText={"thank-you-header"}
     />
   );

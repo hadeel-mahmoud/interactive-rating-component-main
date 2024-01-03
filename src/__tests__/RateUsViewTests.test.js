@@ -20,9 +20,9 @@ test("Make sure that the RateUsView is rendered", () => {
 test("Make sure that the RateUsView is rendered with given props", () => {
   render(
     <RateUsView
-      headerText={"header-text"}
-      bodyText={"body-text"}
-      submitButtonText={"submit-button-text"}
+      ratingViewHeaderText={"header-text"}
+      ratingViewBodyText={"body-text"}
+      ratingViewSubmitButtonText={"submit-button-text"}
     />
   );
 

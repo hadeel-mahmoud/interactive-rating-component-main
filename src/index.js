@@ -2,8 +2,6 @@ import { useState } from "react";
 import Wrapper from "./components/Wrapper/Wrapper";
 import RateUsView from "./components/RateUsView/RateUsView";
 import ThankYouView from "./components/ThankYouView/ThankYouView";
-import thankYouImage from "./assets/illustration-thank-you.svg";
-import star from "./assets/icon-star.svg";
 
 export default function RatingView(props) {
   const [showThankYouNote, setShowThankYouNote] = useState(false);
@@ -13,41 +11,37 @@ export default function RatingView(props) {
     <Wrapper style={props.containerStyle}>
       {!showThankYouNote ? (
         <RateUsView
-          // handleSubmit={() => {
-          //   setShowThankYouNote(true);
-          // }}
-          image={star}
+          ratingViewImage={props.ratingViewImage}
           setShowThankYouNote={setShowThankYouNote}
           setRating={setRating}
-          headerText={"How would you rate us?"}
-          bodyText={"Let us know how we did. "}
-          submitButtonText={"Lets go"}
+          ratingViewHeaderText={props.ratingViewHeaderText}
+          ratingViewBodyText={props.ratingViewBodyText}
+          ratingViewSubmitButtonText={props.ratingViewSubmitButtonText}
           rating={props.testRating ? props.testRating : rating}
-          imageContainerStyle={props.imageContainer}
-          imageStyle={props.imageStyle}
-          ratingHeaderStyle={props.ratingHeaderStyle}
-          ratingDescriptionStyle={props.ratingDescriptionStyle}
-          submitButtonStyle={props.submitButtonStyle}
-          ratingNumberContainerStyle={props.ratingNumberContainerStyle}
-          ratingNumberStyle={props.ratingNumberStyle}
+          ratingViewImageContainerStyle={props.ratingViewImageContainerStyle}
+          ratingViewImageStyle={props.ratingViewImageStyle}
+          ratingViewHeaderStyle={props.ratingViewHeaderStyle}
+          ratingViewDescriptionStyle={props.ratingViewDescriptionStyle}
+          ratingViewSubmitButtonStyle={props.ratingViewSubmitButtonStyle}
+          ratingViewNumberContainerStyle={props.ratingViewNumberContainerStyle}
+          ratingViewNumberStyle={props.ratingViewNumberStyle}
         />
       ) : (
         <ThankYouView
-          image={props.image ? props.image : thankYouImage}
+          thankYouViewImage={props.thankYouViewImage}
           rating={rating}
-          ratingText={
-            props.ratingText
-              ? props.ratingText
-              : "You selected {value} out of 5"
+          thankYouText={props.thankYouText}
+          thankYouViewRatingResultText={props.thankYouViewRatingResultText}
+          thankYouViewDescriptionText={props.thankYouViewDescriptionText}
+          thankYouViewBodyStyle={props.thankYouViewBodyStyle}
+          thankYouViewImageStyle={props.thankYouViewImageStyle}
+          thankYouViewRatingResultTextStyle={
+            props.thankYouViewRatingResultTextStyle
           }
-          thankYouDescriptionText={
-            props.thankYouDescriptionText ? props.thankYouDescriptionText : null
+          thankYouViewHeaderStyle={props.thankYouViewHeaderStyle}
+          thankYouViewDescriptionTextStyle={
+            props.thankYouViewDescriptionTextStyle
           }
-          thankYouBodyStyle={props.thankYouBodyStyle}
-          thankYouImageStyle={props.thankYouImageStyle}
-          ratingResultTextStyle={props.ratingResultTextStyle}
-          thankYouHeaderStyle={props.thankYouHeaderStyle}
-          thankYouDescriptionTextStyle={props.thankYouDescriptionTextStyle}
         />
       )}
     </Wrapper>
