@@ -43,7 +43,8 @@ export default function RateUsView(props) {
         rating={props.rating}
         setRating={props.setRating}
         ratingNumberContainerStyle={props.ratingViewNumberContainerStyle}
-        ratingNumberStyle={props.ratingNumberStyle}
+        ratingViewSelectedNumberStyle={props.ratingViewSelectedNumberStyle}
+        ratingViewNumberStyle={props.ratingViewNumberStyle}
       />
       <button
         data-testid="submit-button"

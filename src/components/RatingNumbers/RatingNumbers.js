@@ -16,9 +16,13 @@ export default function RatingNumbers(props) {
               ? {
                   background: "grey",
                   color: "white",
-                  ...props.ratingNumberStyle,
+                  ...props.ratingViewSelectedNumberStyle,
                 }
-              : props.ratingNumberStyle
+              : {
+                  "--hover-color": "white",
+                  "--hover-background-color": " hsl(25, 97%, 53%)",
+                  ...props.ratingViewNumberStyle,
+                }
           }
           onClick={() => handleValueClick(value)}
           className={styles.numberContainer}

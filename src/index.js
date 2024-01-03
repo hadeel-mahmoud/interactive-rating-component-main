@@ -24,6 +24,7 @@ export default function RatingView(props) {
           ratingViewDescriptionStyle={props.ratingViewDescriptionStyle}
           ratingViewSubmitButtonStyle={props.ratingViewSubmitButtonStyle}
           ratingViewNumberContainerStyle={props.ratingViewNumberContainerStyle}
+          ratingViewSelectedNumberStyle={props.ratingViewSelectedNumberStyle}
           ratingViewNumberStyle={props.ratingViewNumberStyle}
         />
       ) : (
@@ -33,7 +34,6 @@ export default function RatingView(props) {
           thankYouText={props.thankYouText}
           thankYouViewRatingResultText={props.thankYouViewRatingResultText}
           thankYouViewDescriptionText={props.thankYouViewDescriptionText}
-          thankYouViewBodyStyle={props.thankYouViewBodyStyle}
           thankYouViewImageStyle={props.thankYouViewImageStyle}
           thankYouViewRatingResultTextStyle={
             props.thankYouViewRatingResultTextStyle

@@ -3,7 +3,7 @@ import styles from "./ThankYouView.module.css";
 
 export default function ThankYouView(props) {
   return (
-    <div className={styles.body} style={props.thankYouViewBodyStyle}>
+    <div className={styles.body}>
       <img
         data-testid="thank-you-image"
         className={styles.image}
