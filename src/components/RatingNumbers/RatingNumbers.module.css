@@ -17,6 +17,6 @@
   margin-bottom: 2rem;
 }
 .numberContainer:hover {
-  background-color: hsl(25, 97%, 53%) !important;
-  color: white;
+  color: var(--hover-color) !important;
+  background-color: var(--hover-background-color) !important;
 }
